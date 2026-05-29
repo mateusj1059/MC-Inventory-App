@@ -9,7 +9,7 @@ import { tap } from 'rxjs';
 export class AuthService {
 
   private http = inject(HttpClient);
-  private readonly API_URL = 'https://collaborate-ook5.onrender.com/api/v1';
+  private readonly API_URL = 'https://mc-inventory.onrender.com/api/v1';
 
   login(credentials: LoginRequest) {
    return this.http.post<LoginResponse>(`${this.API_URL}/auth/login`, credentials).pipe(tap({
